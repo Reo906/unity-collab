@@ -18,9 +18,14 @@ public class Deactivate : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        Activate_object.SetActive(true);
-        Activate_linked.SetActive(true);
-        Deactivate_object.SetActive(false);
-        Deactivate_linked.SetActive(false);
+        if (collider.tag == "Player")
+        {
+            Activate_object.SetActive(true);
+            Activate_linked.SetActive(true);
+            Deactivate_object.SetActive(false);
+            Deactivate_linked.SetActive(false);
+
+        }
+    
     }
 }
